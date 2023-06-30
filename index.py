@@ -134,7 +134,7 @@ def main(page: ft.Page):
         page.update()
 
     def crescer_caminho(e):
-        e.control.width = page.widsth*0.6
+        e.control.width = page.width*0.6
         page.update()
     
     def diminuir_caminho(e):
@@ -142,7 +142,8 @@ def main(page: ft.Page):
         page.update()
 
     def get_caminho(versao):
-        return  fr"{caminho_biblia.value}\biblia{versao}.md"
+        pasta = os.path.join(os.getcwd(), 'biblias')
+        return  os.path.join(pasta, versao + '.' + 'md')
 
     page.title = "Pesquisador na Biblia"
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
@@ -157,7 +158,7 @@ def main(page: ft.Page):
               ft.Radio(value="AT", label="AT"),
               ft.Radio(value="Tudo", label="Tudo")]), on_change=change_testamento)
     
-    caminho_biblia = ft.TextField(value=r"C:\Users\Galdino\Documents\Obsidian\Amigos do Mundo\pesquisador\biblias",
+    caminho_biblia = ft.TextField(value=os.path.join(os.getcwd(), 'biblias') ,
      width=page.width*0.05, on_change=listar_versoes, text_align="right", on_focus=crescer_caminho, on_blur=diminuir_caminho)
     
     dd_livros = ft.Dropdown(options=[ft.dropdown.Option(livro['nome']) for livro in LIVROS], on_change=carregar_capitulos, ref=ref_dd_livros)
@@ -262,9 +263,9 @@ def main(page: ft.Page):
 
     page.add(
             ft.Column([
-                ft.Row([ txt_search, options, ft.IconButton(ft.icons.SEARCH, on_click=listar), caminho_biblia, 
-                dd_livros,
-                dd_capitulos
+                ft.Row([ options, dd_livros, dd_capitulos,   txt_search, ft.IconButton(ft.icons.SEARCH, on_click=listar), 
+                
+                
                              ]),
                     ft.Row( [  
                         ft.Container(versoes, width=page.width*0.48, height=page.height*0.08),
