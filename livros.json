@@ -1,0 +1,466 @@
+{
+  "livros": [
+    {
+      "id": 1,
+      "nome": "Gênesis",
+      "sigla": "Gn",
+      "capitulos": 50,
+      "testamento": "AT"
+    },
+    {
+      "id": 2,
+      "nome": "Êxodo",
+      "sigla": "Êx",
+      "capitulos": 40,
+      "testamento": "AT"
+    },
+    {
+      "id": 3,
+      "nome": "Levítico",
+      "sigla": "Lv",
+      "capitulos": 27,
+      "testamento": "AT"
+    },
+    {
+      "id": 4,
+      "nome": "Números",
+      "sigla": "Nm",
+      "capitulos": 36,
+      "testamento": "AT"
+    },
+    {
+      "id": 5,
+      "nome": "Deuteronômio",
+      "sigla": "Dt",
+      "capitulos": 34,
+      "testamento": "AT"
+    },
+    {
+      "id": 6,
+      "nome": "Josué",
+      "sigla": "Js",
+      "capitulos": 24,
+      "testamento": "AT"
+    },
+    {
+      "id": 7,
+      "nome": "Juízes",
+      "sigla": "Jz",
+      "capitulos": 21,
+      "testamento": "AT"
+    },
+    {
+      "id": 8,
+      "nome": "Rute",
+      "sigla": "Rt",
+      "capitulos": 4,
+      "testamento": "AT"
+    },
+    {
+      "id": 9,
+      "nome": "1 Samuel",
+      "sigla": "1 Sm",
+      "capitulos": 31,
+      "testamento": "AT"
+    },
+    {
+      "id": 10,
+      "nome": "2 Samuel",
+      "sigla": "2 Sm",
+      "capitulos": 24,
+      "testamento": "AT"
+    },
+    {
+      "id": 11,
+      "nome": "1 Reis",
+      "sigla": "1 Rs",
+      "capitulos": 22,
+      "testamento": "AT"
+    },
+    {
+      "id": 12,
+      "nome": "2 Reis",
+      "sigla": "2 Rs",
+      "capitulos": 25,
+      "testamento": "AT"
+    },
+    {
+      "id": 13,
+      "nome": "1 Crônicas",
+      "sigla": "1 Cr",
+      "capitulos": 29,
+      "testamento": "AT"
+    },
+    {
+      "id": 14,
+      "nome": "2 Crônicas",
+      "sigla": "2 Cr",
+      "capitulos": 36,
+      "testamento": "AT"
+    },
+    {
+      "id": 15,
+      "nome": "Esdras",
+      "sigla": "Ed",
+      "capitulos": 10,
+      "testamento": "AT"
+    },
+    {
+      "id": 16,
+      "nome": "Neemias",
+      "capitulos": 13,
+      "testamento": "AT"
+    },
+    {
+      "id": 17,
+      "nome": "Ester",
+      "sigla": "Et",
+      "capitulos": 10,
+      "testamento": "AT"
+    },
+    {
+      "id": 18,
+      "nome": "Jó",
+      "sigla": "Jó",
+      "capitulos": 42,
+      "testamento": "AT"
+    },
+    {
+      "id": 19,
+      "nome": "Salmos",
+      "sigla": "Sl",
+      "capitulos": 150,
+      "testamento": "AT"
+    },
+    {
+      "id": 20,
+      "nome": "Provérbios",
+      "sigla": "Pv",
+      "capitulos": 31,
+      "testamento": "AT"
+    },
+    {
+      "id": 21,
+      "nome": "Eclesiastes",
+      "sigla": "Ec",
+      "capitulos": 12,
+      "testamento": "AT"
+    },
+    {
+      "id": 22,
+      "nome": "Cânticos",
+      "sigla": "Ct",
+      "capitulos": 8,
+      "testamento": "AT"
+    },
+    {
+      "id": 23,
+      "nome": "Isaías",
+      "sigla": "Is",
+      "capitulos": 66,
+      "testamento": "AT"
+    },
+    {
+      "id": 24,
+      "nome": "Jeremias",
+      "sigla": "Jr",
+      "capitulos": 52,
+      "testamento": "AT"
+    },
+    {
+      "id": 25,
+      "nome": "Lamentações",
+      "sigla": "Lm",
+      "capitulos": 5,
+      "testamento": "AT"
+    },
+    {
+      "id": 26,
+      "nome": "Ezequiel",
+      "sigla": "Ez",
+      "capitulos": 48,
+      "testamento": "AT"
+    },
+    {
+      "id": 27,
+      "nome": "Daniel",
+      "sigla": "Dn",
+      "capitulos": 12,
+      "testamento": "AT"
+    },
+    {
+      "id": 28,
+      "nome": "Oséias",
+      "sigla": "Os",
+      "capitulos": 14,
+      "testamento": "AT"
+    },
+    {
+      "id": 29,
+      "nome": "Joel",
+      "sigla": "Jl",
+      "capitulos": 3,
+      "testamento": "AT"
+    },
+    {
+      "id": 30,
+      "nome": "Amós",
+      "sigla": "Am",
+      "capitulos": 9,
+      "testamento": "AT"
+    },
+    {
+      "id": 31,
+      "nome": "Obadias",
+      "sigla": "Ob",
+      "capitulos": 1,
+      "testamento": "AT"
+    },
+    {
+      "id": 32,
+      "nome": "Jonas",
+      "sigla": "Jn",
+      "capitulos": 4,
+      "testamento": "AT"
+    },
+    {
+      "id": 33,
+      "nome": "Miquéias",
+      "sigla": "Mq",
+      "capitulos": 7,
+      "testamento": "AT"
+    },
+    {
+      "id": 34,
+      "nome": "Naum",
+      "sigla": "Na",
+      "capitulos": 3,
+      "testamento": "AT"
+    },
+    {
+      "id": 35,
+      "nome": "Habacuque",
+      "sigla": "Hc",
+      "capitulos": 3,
+      "testamento": "AT"
+    },
+    {
+      "id": 36,
+      "nome": "Sofonias",
+      "sigla": "Sf",
+      "capitulos": 3,
+      "testamento": "AT"
+    },
+    {
+      "id": 37,
+      "nome": "Ageu",
+      "sigla": "Ag",
+      "capitulos": 2,
+      "testamento": "AT"
+    },
+    {
+      "id": 38,
+      "nome": "Zacarias",
+      "sigla": "Zc",
+      "capitulos": 14,
+      "testamento": "AT"
+    },
+    {
+      "id": 39,
+      "nome": "Malaquias",
+      "sigla": "Ml",
+      "capitulos": 4,
+      "testamento": "AT"
+    },
+    {
+      "id": 40,
+      "nome": "Mateus",
+      "sigla": "Mt",
+      "capitulos": 28,
+      "testamento": "NT"
+    },
+    {
+      "id": 41,
+      "nome": "Marcos",
+      "sigla": "Mc",
+      "capitulos": 16,
+      "testamento": "NT"
+    },
+    {
+      "id": 42,
+      "nome": "Lucas",
+      "sigla": "Lc",
+      "capitulos": 24,
+      "testamento": "NT"
+    },
+    {
+      "id": 43,
+      "nome": "João",
+      "sigla": "Jo",
+      "capitulos": 21,
+      "testamento": "NT"
+    },
+    {
+      "id": 44,
+      "nome": "Atos",
+      "sigla": "At",
+      "capitulos": 28,
+      "testamento": "NT"
+    },
+    {
+      "id": 45,
+      "nome": "Romanos",
+      "sigla": "Rm",
+      "capitulos": 16,
+      "testamento": "NT"
+    },
+    {
+      "id": 46,
+      "nome": "1 Coríntios",
+      "sigla": "1 Co",
+      "capitulos": 16,
+      "testamento": "NT"
+    },
+    {
+      "id": 47,
+      "nome": "2 Coríntios",
+      "sigla": "2 Co",
+      "capitulos": 13,
+      "testamento": "NT"
+    },
+    {
+      "id": 48,
+      "nome": "Gálatas",
+      "sigla": "Gl",
+      "capitulos": 6,
+      "testamento": "NT"
+    },
+    {
+      "id": 49,
+      "nome": "Efésios",
+      "sigla": "Ef",
+      "capitulos": 6,
+      "testamento": "NT"
+    },
+    {
+      "id": 50,
+      "nome": "Filipenses",
+      "sigla": "Fp",
+      "capitulos": 4,
+      "testamento": "NT"
+    },
+    {
+      "id": 51,
+      "nome": "Colossenses",
+      "sigla": "Cl",
+      "capitulos": 4,
+      "testamento": "NT"
+    },
+    {
+      "id": 52,
+      "nome": "1 Tessalonicenses",
+      "sigla": "1 Ts",
+      "capitulos": 5,
+      "testamento": "NT"
+    },
+    {
+      "id": 53,
+      "nome": "2 Tessalonicenses",
+      "sigla": "2 Ts",
+      "capitulos": 3,
+      "testamento": "NT"
+    },
+    {
+      "id": 54,
+      "nome": "1 Timóteo",
+      "sigla": "1 Tm",
+      "capitulos": 6,
+      "testamento": "NT"
+    },
+    {
+      "id": 55,
+      "nome": "2 Timóteo",
+      "sigla": "2 Tm",
+      "capitulos": 4,
+      "testamento": "NT"
+    },
+    {
+      "id": 56,
+      "nome": "Tito",
+      "sigla": "Tt",
+      "capitulos": 3,
+      "testamento": "NT"
+    },
+    {
+      "id": 57,
+      "nome": "Filemom",
+      "sigla": "Fm",
+      "capitulos": 1,
+      "testamento": "NT"
+    },
+    {
+      "id": 58,
+      "nome": "Hebreus",
+      "sigla": "Hb",
+      "capitulos": 13,
+      "testamento": "NT"
+    },
+    {
+      "id": 59,
+      "nome": "Tiago",
+      "sigla": "Tg",
+      "capitulos": 5,
+      "testamento": "NT"
+    },
+    {
+      "id": 60,
+      "nome": "1 Pedro",
+      "sigla": "1 Pe",
+      "capitulos": 5,
+      "testamento": "NT"
+    },
+    {
+      "id": 61,
+      "nome": "2 Pedro",
+      "sigla": "2 Pe",
+      "capitulos": 3,
+      "testamento": "NT"
+    },
+    {
+      "id": 62,
+      "nome": "1 João",
+      "sigla": "1 Jo",
+      "capitulos": 5,
+      "testamento": "NT"
+    },
+    {
+      "id": 63,
+      "nome": "2 João",
+      "sigla": "2 Jo",
+      "capitulos": 1,
+      "testamento": "NT"
+    },
+    {
+      "id": 64,
+      "nome": "3 João",
+      "sigla": "3 Jo",
+      "capitulos": 1,
+      "testamento": "NT"
+    },
+    {
+      "id": 65,
+      "nome": "Judas",
+      "sigla": "Jd",
+      "capitulos": 1,
+      "testamento": "NT"
+    },
+    {
+      "id": 66,
+      "nome": "Apocalipse",
+      "sigla": "Ap",
+      "capitulos": 22,
+      "testamento": "NT"
+    }
+  ]
+}
+     
