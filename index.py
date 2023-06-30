@@ -1,6 +1,6 @@
 import flet as ft
 import os
-import json
+import json, random
 
 
 DEFAULT_FLET_PATH = ''  # or 'ui/path'
@@ -85,7 +85,6 @@ def procurar_texto_arquivo(caminho_arquivo, texto_procurado, testamento):
     referencias = []
     testamento_atual = 'AT'
 
-    print(testamento_atual, testamento)
     with open(caminho_arquivo, 'r', encoding='utf-8') as arquivo:
         linhas = arquivo.readlines()
 
@@ -102,11 +101,26 @@ def procurar_texto_arquivo(caminho_arquivo, texto_procurado, testamento):
     
     return referencias
 
- 
+def get_aleatorio():
+    pasta = os.path.join(os.getcwd(), 'biblias')
+    caminho_arquivo =  os.path.join(pasta, 'Receptus' + '.' + 'md')
+    caminho_arquivo_2 =  os.path.join(pasta, 'Ara' + '.' + 'md')
+
+    with open(caminho_arquivo, 'r', encoding='utf-8') as arquivo:
+        linhas = arquivo.readlines()
+
+    while True:
+        texto_do_dia = linhas[random.randrange(0, len(linhas))]
+        if texto_do_dia[0]=='#':
+            referencia = texto_do_dia.split(':')[0]
+            return [texto_do_dia, retornar_referencia([referencia], caminho_arquivo_2)[0]]
+
 
 def main(page: ft.Page):
+    
+    texto_do_dia = get_aleatorio()
+    referencia_do_dia = texto_do_dia[0].split(':')[0]
 
-    #textos_para_lista = []
     textos_para_lista = ft.Ref[ft.Text]()
     fonema_txt = ft.Ref[ft.Text]()
     ref_search_text = ft.Ref[ft.TextField]()
@@ -115,7 +129,7 @@ def main(page: ft.Page):
     ref_dd_livros = ft.Ref[ft.Dropdown]()
 
     def listar_versoes(e=''):
-        versoes_list = os.listdir(caminho_biblia.value)
+        versoes_list = os.listdir(os.path.join(os.getcwd(), 'biblias'))
         return [versao.replace('biblia','').replace('.md', '') for versao in versoes_list if not 'txt' in versao]
 
     def carregar_capitulos(e):
@@ -133,14 +147,6 @@ def main(page: ft.Page):
         ref_dd_livros.current.options = [ft.dropdown.Option(livro['nome']) for livro in LIVROS if esse_testamento(livro['testamento'], e.control.value)]
         page.update()
 
-    def crescer_caminho(e):
-        e.control.width = page.width*0.6
-        page.update()
-    
-    def diminuir_caminho(e):
-        e.control.width = page.width*0.05
-        page.update()
-
     def get_caminho(versao):
         pasta = os.path.join(os.getcwd(), 'biblias')
         return  os.path.join(pasta, versao + '.' + 'md')
@@ -152,21 +158,19 @@ def main(page: ft.Page):
 
     cores_texto = ft.colors.TERTIARY
 
-    txt_search = ft.TextField(value="#Mt", width=100, ref=ref_search_text)
+    txt_search = ft.TextField(value=referencia_do_dia, width=100, ref=ref_search_text)
     options = ft.RadioGroup(ref=ref_options, content=ft.Row([
               ft.Radio(value="NT", label="NT"),
               ft.Radio(value="AT", label="AT"),
               ft.Radio(value="Tudo", label="Tudo")]), on_change=change_testamento)
-    
-    caminho_biblia = ft.TextField(value=os.path.join(os.getcwd(), 'biblias') ,
-     width=page.width*0.05, on_change=listar_versoes, text_align="right", on_focus=crescer_caminho, on_blur=diminuir_caminho)
+
     
     dd_livros = ft.Dropdown(options=[ft.dropdown.Option(livro['nome']) for livro in LIVROS], on_change=carregar_capitulos, ref=ref_dd_livros)
     dd_capitulos = ft.Dropdown(ref=ref_dd_capitulos, on_change=select_capitulo)
     
 
-    textos_encontrados = ft.ListView(expand=True)
-    textos_encontrados_versao2 = ft.ListView(expand=True)
+    textos_encontrados = ft.ListView(expand=True, controls=[ft.Text(texto_do_dia[0])])
+    textos_encontrados_versao2 = ft.ListView(expand=True, controls=[ft.Text(texto_do_dia[1])])
     textos_referencias = ft.Row(spacing=5, wrap=True, run_spacing=10, height=page.height*0.2, scroll='auto')
 
     fonema = ft.Text(ref=fonema_txt, selectable=True)
@@ -222,7 +226,7 @@ def main(page: ft.Page):
     versoes_2 = ft.RadioGroup(content=ft.Row(
         [ft.Radio(value=versao, label=versao) for versao in listar_versoes()],
         scroll='auto', width=page.width*0.45
-        ), on_change=atualizar_lista_v2)
+        ), on_change=atualizar_lista_v2, value='ARA')
 
     def click_button(e):
         texto_do_botao = e.control.text
@@ -287,4 +291,5 @@ def main(page: ft.Page):
 
 
 if __name__ == "__main__":
-    ft.app(main)
+    print("Iniciado projeto")
+    ft.app(target=main, assets_dir='biblias')
